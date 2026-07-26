@@ -1,0 +1,25 @@
+mode = "Dark"
+
+[background_color]
+hex = "#000000"
+
+[background_color_alt]
+hex = "#1A1A1A"
+
+[surface_color]
+hex = "#2D2D2D"
+
+[foreground_color]
+hex = "#FFFFFF"
+
+[foreground_color_muted]
+hex = "#AAAAAA"
+
+[accent_color]
+hex = "#007BFF"
+
+[red_color]
+hex = "#FF0000"
+
+[green_color]
+hex = "#00FF00"
