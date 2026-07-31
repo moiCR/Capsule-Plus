@@ -42,8 +42,7 @@ print_success "Found AUR helper: \e[1;36m$AUR_HELPER\e[0m"
 
 AUR_DEPENDENCIES=(
     "hyprland"
-    "ttf-jetbrains-mono-nerd"
-    "ghostty"
+    "kitty"
     "fish"
     "networkmanager"
     "pipewire"
@@ -55,13 +54,16 @@ AUR_DEPENDENCIES=(
     "gsettings-desktop-schemas"
     "nautilus"
     "hyprshot"
-    "brave-origin-bin"
+    "zen-browser"
     "yazi"
     "cliphist"
     "cpupower"
     "hyprlock"
     "qt5ct"
     "qt6ct"
+    "xdg-desktop-portal-gtk"
+    "xdg-desktop-portal-hyprland"
+    "xdg-desktop-portal"
 )
 
 print_status "Checking package status..."
@@ -150,4 +152,11 @@ if command -v hyprctl &>/dev/null && [[ -n "${HYPRLAND_INSTANCE_SIGNATURE:-}" ]]
     hyprctl reload
     print_success "Hyprland reloaded!"
 fi
+
+if command -v Capsule &>/dev/null; then
+    print_status "Starting Capsule..."
+    Capsule &>/dev/null &
+    print_success "Capsule started!"
+fi
+
 
