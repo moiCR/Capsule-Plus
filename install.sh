@@ -140,6 +140,7 @@ create_symlink() {
 DOTFILES_DIR="$HOME/.config/capsule"
 
 create_symlink "$DOTFILES_DIR/hypr" "$HOME/.config/hypr"
+create_symlink "$DOTFILES_DIR/kitty" "$HOME/.config/kitty"
 
 echo -e "----------------------------------------"
 print_success "Setup completed successfully!"
@@ -149,3 +150,4 @@ if command -v hyprctl &>/dev/null && [[ -n "${HYPRLAND_INSTANCE_SIGNATURE:-}" ]]
     hyprctl reload
     print_success "Hyprland reloaded!"
 fi
+

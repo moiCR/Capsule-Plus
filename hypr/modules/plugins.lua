@@ -40,6 +40,11 @@ end
 
 
 hl.window_rule({
-    match = { class = "com.mitchellh.ghostty" },
+    match = { class = "kitty" },
+    tag = "+hyprglass_preset_apple"
+})
+
+hl.window_rule({
+    match = { class = "zen" },
     tag = "+hyprglass_preset_apple"
 })

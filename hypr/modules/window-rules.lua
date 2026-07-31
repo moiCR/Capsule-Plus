@@ -76,21 +76,3 @@ hl.window_rule({
     },
     float = false,
 })
-
-hl.layer_rule({
-    name = "quickshell-settings-blur",
-    match = { namespace = "^quickshell:settings$" },
-    blur = true,
-})
-
-hl.layer_rule({
-    name = "quickshell-launcher-blur",
-    match = { namespace = "^quickshell:launcher$" },
-    blur = true,
-})
-
-hl.layer_rule({
-    name = "quickshell-wifiprompt-blur",
-    match = { namespace = "^quickshell:wifi_prompt$" },
-    blur = true,
-})

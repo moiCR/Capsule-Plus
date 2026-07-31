@@ -10,13 +10,10 @@ hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region --clipboa
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(programs.browser))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(programs.code_editor))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
--- hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("kitty -e yazi"))
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd("hyprpicker -a"))
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("quickshell ipc call capsule setMode clipboard"))
-hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("quickshell ipc call capsule setMode emoji"))
-hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd("quickshell ipc call capsule setMode launcher"), { release = true })
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
@@ -64,21 +61,7 @@ hl.bind("SUPER + SHIFT + M", hl.dsp.exec_cmd("spotify"))
 
 -- Dynamic Dock Mode Controls (Quickshell IPC)
 hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd("Capsule toggle launcher"))
--- Toggle Settings Panel
-hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("quickshell ipc call settings toggle"))
-
--- Toggle Session Panel (Power Menu)
-hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("quickshell ipc call capsule setMode session"))
-
--- Empty submap to temporarily disable all binds during shortcut recording
-hl.define_submap("clean", function()
-    hl.bind("SUPER + ESCAPE", hl.dsp.submap("reset"))
-end)
-
-
-
-
-
-
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("Capsule toggle clipboard"))
+hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd("Capsule toggle emoji"))
 
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("zapzap"))
