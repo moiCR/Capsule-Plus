@@ -59,9 +59,9 @@ hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("playerctl volume 0.05-"),
     { locked = true, repeating = true })
 hl.bind("SUPER + SHIFT + M", hl.dsp.exec_cmd("spotify"))
 
--- Dynamic Dock Mode Controls (Quickshell IPC)
-hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd("Capsule toggle launcher"))
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("Capsule toggle clipboard"))
-hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd("Capsule toggle emoji"))
+-- Dynamic Capsule Mode Controls
+hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd("capsule toggle launcher"))
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("capsule toggle clipboard"))
+hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd("capsule toggle emoji"))
 
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("zapzap"))
